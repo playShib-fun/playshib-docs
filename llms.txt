@@ -1,0 +1,248 @@
+# Shiba Inu Documentation - Complete Ecosystem Overview
+
+## Introduction
+Shiba Inu is a comprehensive blockchain ecosystem built around the SHIB token, featuring multiple products and services including Shibarium (Layer 2), Shib Alpha Layer, ShibaSwap (DEX), Metaverse, Staking, Bridge, and more.
+
+## Core Products & Services
+
+### 1. Shibarium (Layer 2)
+- **Description**: Ethereum Layer 2 scaling solution incubated by Shib.io
+- **Network Details**:
+  - Network name: Shibarium
+  - RPC URL: https://rpc.shibrpc.com
+  - Explorer URL: https://shibariumscan.io
+  - Chain ID: 109
+  - Currency symbol: BONE
+- **Key Benefits**:
+  - Low gas fees and fast transaction processing
+  - Global payments and financial services
+  - Creator monetization through NFTs and digital assets
+  - Comprehensive builder support with Ethereum compatibility
+  - Access to large, passionate user base
+- **Architecture**: Proof-of-Stake (PoS) with Heimdall and Bor layers
+- **Use Cases**: DeFi, NFTs, gaming, payments, creator economy
+
+### 2. Shib Alpha Layer
+- **Description**: Decentralized shared sequencer and interoperability protocol powered by Elder
+- **Key Features**:
+  - Seamless Web2-like experience with decentralization
+  - Single account system for multiple RollApps
+  - Instant confirmations with inclusion finalities
+  - Enhanced interoperability for cross-chain operations
+  - Self-reinforcing ecosystem growth cycle
+- **Benefits**: Accessibility, efficiency, security, growth catalyst
+- **Architecture**: Cosmos SDK and CometBFT based
+- **Use Cases**: Rollup infrastructure, cross-chain messaging, shared sequencing
+- **Documentation**: Located in `/alpha-layer/` directory
+
+### 3. ShibaSwap (Decentralized Exchange)
+- **Description**: DEX available on both Ethereum and Shibarium networks
+- **Versions**:
+  - **ShibaSwap v1**: Classic AMM with simple liquidity provision
+  - **ShibaSwap v2**: Advanced concentrated liquidity with NFT positions
+- **Features**:
+  - Token swapping across networks
+  - Liquidity provision (LP tokens for v1, NFT positions for v2)
+  - Yield farming with BONE rewards (Ethereum only)
+  - Cross-chain trading between Ethereum and Shibarium
+- **Fee Structure**: v1 (0.3% fixed), v2 (0.05%, 0.3%, 1% tiers)
+- **Supported Networks**: Ethereum Mainnet, Shibarium
+
+### 4. Bridge System
+- **Description**: Secure cross-chain bridges between Ethereum and Shibarium
+- **Bridge Types**:
+  - **PoS Bridge**: Flexible, 15min deposit, 30min withdrawal, supports ETH/ERC20/ERC721/ERC1155
+  - **Plasma Bridge**: Rigid, 15min deposit, 1hr withdrawal, supports ETH/ERC20/ERC721 only
+- **Security**: Trustless bi-directional transactions with 1:1 token pegging
+- **Features**: State Sync mechanism, checkpoint transactions, circulating supply preservation
+
+### 5. Shib: The Metaverse
+- **Description**: Virtual world for creativity and social interaction
+- **Key Features**:
+  - Avatar Builder: Customizable digital identities
+  - Plot Builder: Virtual real estate using Metaverse Land NFTs
+  - Social Interaction: Chat, voice communication, community events
+  - Exploration: Multiple hubs and interactive spaces
+- **System Requirements**: Windows 11, Intel i7/AMD Ryzen 5, 32GB RAM, 50GB storage, RTX 3060/RX 6600 XT
+- **Status**: Early access, evolving platform
+
+### 6. Bury 2.0 (Staking Platform)
+- **Description**: Advanced staking platform for governance participation
+- **Supported Tokens**: SHIB, TREAT, LEASH, BONE
+- **Features**:
+  - Vote-escrowed (veToken) system for governance power
+  - Flexible lock periods: 1 week to 4 years
+  - Auto-decay voting power over time
+  - Early withdrawal penalty: 30%
+- **Current Status**: Beta, voting power only (rewards coming soon)
+- **Network**: Shibarium (Chain ID: 109)
+
+### 7. Shib Name Service (SNS)
+- **Description**: Web3 digital identity system with multichain support
+- **Key Features**:
+  - Multichain wallet addresses using *SHIB format
+  - Cross-platform identity across DeFi, SocialFi, GameFi
+  - Infrastructure identifiers for smart contracts and nodes
+  - dApp access using Shib Names
+- **Integration**: D3 blockchain for DomainFi
+- **Benefits**: Universal identity, enhanced security, future-proof design
+
+### 8. Shib DAO (Decentralized Governance)
+- **Description**: Comprehensive DAO ecosystem for community governance
+- **Architecture**: Dual-layer governance system
+- **Token Types**:
+  - **BONE**: Primary governance and staking token
+  - **LEASH**: Limited supply premium token
+  - **TREAT**: Rewards and utility token
+  - **SHIB**: Foundation token
+- **DAO Types**:
+  - **Doggy DAOs**: Official ecosystem DAOs (BONE, TREAT, SHIB, LEASH)
+  - **Community DAOs**: Grassroots community-created DAOs
+- **Features**: Token-weighted voting, karma-based privileges, gasless governance
+
+## Build Tools & SDKs
+
+### APIs & Data
+- **RPC Connection**: Standard Ethereum JSON-RPC API
+- **Base URLs**: 
+  - Shibarium: https://api.shibrpc.com/shibarium/
+  - Puppynet: https://api.shibrpc.com/puppynet/
+- **On-Chain Data API**: Comprehensive blockchain data access
+- **Crypto Payments**: Payment processing solutions
+
+### Development Tools
+- **Shib Paymaster**: Gas fee management
+- **ShibaSwap SDKs**: v1 and v2 SDKs for DEX integration
+- **Alpha Layer Hardhat Plugin**: Development framework
+- **Elder.js**: JavaScript library for Elder protocol
+- **Elder Wrap**: Wrapper utilities
+- **Node Running**: Tools for running Shibarium nodes
+
+## Network Information
+
+### Shibarium Mainnet
+- **Chain ID**: 109
+- **RPC URL**: https://rpc.shibrpc.com
+- **Explorer**: https://shibariumscan.io
+- **Currency**: BONE
+- **Consensus**: Proof-of-Stake
+
+### Puppynet Testnet
+- **Purpose**: Development and testing environment
+- **RPC URL**: https://api.shibrpc.com/puppynet/
+- **Access**: Requires API key from Developer Portal
+
+## Ecosystem Tokens
+
+### SHIB Token
+- **Purpose**: Foundation token of the ecosystem
+- **Use Cases**: Base governance participation, ecosystem foundation
+
+### BONE Token
+- **Purpose**: Primary governance and staking token
+- **Use Cases**: Shibarium validator staking, main governance decisions
+- **Network**: Shibarium native token
+
+### LEASH Token
+- **Purpose**: Limited supply premium token
+- **Use Cases**: Enhanced governance rights, special ecosystem features
+- **Supply**: Limited quantity
+
+### TREAT Token
+- **Purpose**: Rewards and utility token
+- **Use Cases**: Rewards distribution, future ecosystem features
+
+## Use Cases & Applications
+
+### Financial Services
+- Global payments and remittances
+- Microtransactions
+- DeFi protocols (lending, yield farming)
+- Cross-chain trading
+
+### Creator Economy
+- NFT marketplaces and trading
+- Digital collectibles
+- Artist and musician monetization
+- Creator revenue streams
+
+### Gaming & Metaverse
+- Virtual real estate
+- Avatar customization
+- Social interaction platforms
+- GameFi applications
+
+### Developer Ecosystem
+- dApp development and deployment
+- Smart contract deployment
+- Cross-chain application building
+- Rollup infrastructure
+
+## Technical Architecture
+
+### Shibarium Architecture
+- **Heimdall**: Validator layer for consensus
+- **Bor**: Block producer layer
+- **PoS Manager**: Staking and validator management
+- **Plasma Contracts**: Security mechanism for bridge
+
+### Shib Alpha Layer Architecture
+- **Elder Protocol**: Decentralized shared sequencer
+- **Cosmos SDK**: Application framework
+- **CometBFT**: Consensus engine
+- **Transaction Flow**: Optimized sequencing and finality
+
+### Security Features
+- **Proof-of-Stake**: Validator-based security
+- **Plasma Security**: Ethereum-backed bridge security
+- **Censorship Resistance**: Decentralized governance
+- **Cross-Chain Security**: Multiple bridge types for different security needs
+
+## Community & Support
+
+### Resources
+- **Documentation**: https://docs.shib.io
+- **Main Website**: https://shib.io
+- **Blog**: https://blog.shib.io
+- **GitHub**: https://github.com/shibaone
+- **Support**: https://shib.io/contactus
+
+### Showcase Projects
+- **Blocklords**: Medieval grand strategy game
+- **Aerodrome**: Central trading and liquidity marketplace
+- **Morpho**: Lending protocol
+- **OpenSea**: NFT marketplace
+- **Cat Town**: Onchain life sim game
+- **HeyElsa AI**: AI crypto co-pilot
+
+### Social Media
+- **X (Twitter)**: https://x.com/shibatoken
+- **LinkedIn**: https://www.linkedin.com/company/shibainutoken
+
+## Legal & Compliance
+
+### Policies
+- **Privacy Policy**: Comprehensive data protection
+- **Terms of Service**: Platform usage terms
+- **Cookie Policy**: Cookie usage and management
+
+### Governance
+- **Transparent On-Chain Governance**: All decisions recorded on blockchain
+- **Community-Driven**: Token holder participation in key decisions
+- **Multi-Strategy Voting**: Flexible governance mechanisms
+
+## Development & Deployment
+
+### Getting Started
+1. **Build dApps**: Deploy applications on Shibarium
+2. **Launch Tokens**: Create new tokens on the network
+3. **Deploy Contracts**: Smart contract development and deployment
+4. **Launch Rollups**: Create custom Layer 2 solutions
+
+### Tools & SDKs
+- **Hardhat Integration**: Development framework support
+- **Web3.js Support**: Standard Ethereum tooling compatibility
+- **API Access**: Comprehensive data and RPC endpoints
+- **Faucet**: Testnet token distribution
+
+This comprehensive ecosystem provides a complete Web3 platform for developers, users, and creators, with emphasis on accessibility, security, and community-driven governance. 

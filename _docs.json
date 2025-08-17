@@ -1,0 +1,53 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "PlayShib.fun Documentation",
+  "colors": {
+    "primary": "#578BFA",
+    "light": "#578BFA",
+    "dark": "#578BFA"
+  },
+  "favicon": "/favicon.ico",
+  "contextual": {
+    "options": [ "chatgpt", "claude"]
+  },
+  "logo": {
+    "light": "/play-shib.svg",
+    "dark": "/play-shib.svg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Blog",
+        "href": "https://blog.shib.io/"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/shibaone"
+      },
+      {
+        "label": "Support",
+        "href": "https://shib.io/contactus"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "shib.io",
+      "href": "https://shib.io"
+    }
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/Shibtoken",
+      "github": "https://github.com/shibaone",
+      "linkedin": "https://www.linkedin.com/company/shibainutoken"
+    }
+  },
+  "redirects": [
+    { "source": "/play", "destination": "/play/index" }
+  ],
+  "search": {
+    "enabled": true,
+    "provider": "mintlify"
+  }
+}

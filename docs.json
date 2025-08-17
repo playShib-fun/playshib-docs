@@ -1,0 +1,120 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Shiba Inu  Documentation",
+  "colors": {
+    "primary": "#578BFA",
+    "light": "#578BFA",
+    "dark": "#578BFA"
+  },
+  "favicon": "/favicon.ico",
+  "api": {
+    "playground": {
+      "display": "simple"
+    },
+    "examples": {
+      "languages": [
+        "javascript"
+      ]
+    }
+  },
+  "navigation": {
+    "groups": [
+      { "group": "Product Overview", "pages": ["play/index", "play/prediction-guide", "play/prediction-faq"] }
+    ]
+  },
+  "logo": {
+    "light": "/play-shib.svg",
+    "dark": "/play-shib.svg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "https://shib.io/contactus"
+      }
+    ]
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/Shibtoken",
+      "discord": "https://github.com/shibaone",
+      "linkedin": "https://www.linkedin.com/company/shibainutoken"
+    },
+    "links": [
+      {
+        "header": "PlayShib",
+        "items": [
+          {
+            "label": "playshib.fun",
+            "href": "https://playshib.fun"
+          },
+          {
+            "label": "Privacy Policy",
+            "href": "https://playshib.fun/privacy-policy/"
+          },
+          {
+            "label": "Terms of Service",
+            "href": "https://playshib.fun/terms-and-conditions/"
+          }
+        ]
+      }
+    ]
+  },
+  "redirects": [
+    {
+      "source": "/play",
+      "destination": "/play/index"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/next/static/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/socket.io/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Authorization"
+        }
+      ]
+    }
+  ],
+  "integrations": {
+    "ga4": {
+      "measurementId": "G-43WDEP4ZYP",
+      "config": {
+        "anonymize_ip": true,
+        "cookie_flags": "SameSite=None;Secure",
+        "send_page_view": true,
+        "custom_map": {
+          "custom_parameter_1": "user_type",
+          "custom_parameter_2": "page_category"
+        }
+      }
+    }
+  },
+  "search": {
+    "enabled": true,
+    "provider": "mintlify"
+  }
+}
