@@ -29,17 +29,13 @@
   },
   "navbar": {
     "links": [
-      {
-        "label": "Support",
-        "href": "https://shib.io/contactus"
-      }
     ]
   },
   "footer": {
     "socials": {
       "x": "https://x.com/Shibtoken",
       "discord": "https://github.com/shibaone",
-      "linkedin": "https://www.linkedin.com/company/shibainutoken"
+      "telegram": "https://www.linkedin.com/company/shibainutoken"
     },
     "links": [
       {
