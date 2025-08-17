@@ -3,7 +3,7 @@
 [![Mintlify](https://img.shields.io/badge/Docs-Mintlify-blue)](https://mintlify.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-Official documentation for [PlayShib.fun](https://playshib.fun), a decentralized prediction game built on the Shibarium blockchain where users can predict BONE token price movements and win rewards.
+Official documentation for [PlayShib.fun](https://playshib.fun), decentralized prediction game built on the Shibarium blockchain where users can predict BONE token price movements and win rewards.
 
 ## 🎯 About PlayShib.fun
 
