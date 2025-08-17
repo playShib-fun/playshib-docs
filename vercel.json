@@ -3,11 +3,6 @@
   "outputDirectory": ".",
   "framework": null,
   "installCommand": "echo 'Mintlify site - no install needed'",
-  "functions": {
-    "api/**/*.js": {
-      "runtime": "nodejs18.x"
-    }
-  },
   "headers": [
     {
       "source": "/(.*)",
