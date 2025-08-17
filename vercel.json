@@ -1,0 +1,6 @@
+{
+  "buildCommand": "echo 'Mintlify site - no build needed'",
+  "outputDirectory": ".",
+  "framework": null,
+  "installCommand": "echo 'Mintlify site - no install needed'"
+}
