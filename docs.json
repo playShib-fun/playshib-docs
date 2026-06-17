@@ -20,7 +20,8 @@
   },
   "navigation": {
     "groups": [
-      { "group": "Product Overview", "pages": ["play/index", "play/prediction-guide", "play/prediction-faq"] }
+      { "group": "Product Overview", "pages": ["play/index", "play/prediction-guide", "play/prediction-faq"] },
+      { "group": "Technical Reference", "pages": ["play/technical-overview", "play/contract-reference"] }
     ]
   },
   "logo": {

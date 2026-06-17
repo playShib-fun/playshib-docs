@@ -3,13 +3,13 @@
 [![Mintlify](https://img.shields.io/badge/Docs-Mintlify-blue)](https://mintlify.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-Official documentation for [PlayShib.fun](https://playshib.fun), decentralized prediction game built on the Shibarium blockchain where users can predict BONE token price movements and win rewards.
+Official documentation for [PlayShib.fun](https://playshib.fun), a decentralized prediction game built on the Shibarium blockchain where users stake BONE to predict SHIB/USD price movements and win rewards.
 
 ## 🎯 About PlayShib.fun
 
 PlayShib.fun is a simple and decentralized prediction platform that allows users to:
 
-- **Predict BONE Price Movements**: Bet on whether BONE token prices will go UP or DOWN in 5-minute rounds
+- **Predict SHIB/USD Price Movements**: Bet on whether the SHIB/USD price will go HIGHER or LOWER in 5-minute rounds
 - **Earn Rewards**: Win a share of the prize pool when predictions are correct
 - **Stake BONE Tokens**: Use your BONE tokens to participate in the game
 - **Automatic Payouts**: Collect winnings at any time with no time pressure
@@ -17,8 +17,10 @@ PlayShib.fun is a simple and decentralized prediction platform that allows users
 ### Key Features
 
 - **5-Minute Rounds**: Quick, engaging prediction rounds
+- **Chainlink-Verified Prices**: SHIB/USD prices come from Chainlink Data Streams and are cryptographically verified on-chain — no manual price override exists
 - **Decentralized**: Built on Shibarium blockchain for transparency and security
-- **Token Burning**: 2% of staked BONE is permanently burned each round
+- **Fair Treasury Fee**: A 5% fee on each round's pot funds platform upkeep, with a portion contributed to S.O.U. to support bridge hack victims
+- **Refund Protection**: Rounds that can't be settled in time are voided and stakes are fully refundable
 - **Dynamic Prize Pools**: Rewards adjust based on user predictions
 - **No Time Limits**: Collect winnings whenever you want
 
@@ -30,10 +32,11 @@ playshib-docs/
 ├── play/                  # Documentation pages
 │   ├── index.mdx         # Main prediction overview
 │   ├── prediction-guide.mdx  # Step-by-step guide
-│   └── prediction-faq.mdx    # Frequently asked questions
+│   ├── prediction-faq.mdx    # Frequently asked questions
+│   ├── technical-overview.mdx   # Architecture & oracle deep dive
+│   └── contract-reference.mdx   # Addresses, roles, functions, events
 ├── custom.css            # Custom styling
 ├── Dockerfile            # Docker configuration
-├── vercel.json           # Vercel deployment config
 └── README.md             # This file
 ```
 
@@ -79,23 +82,18 @@ playshib-docs/
 
 ## 📚 Documentation Structure
 
-The documentation is organized into three main sections:
+The documentation is organized into two groups:
 
-### 1. **Prediction Overview** (`/play/index`)
-- Introduction to the prediction game
-- How the system works
-- Important rules and fees
-- Contract information
+### Product Overview
 
-### 2. **How-to Guide** (`/play/prediction-guide`)
-- Step-by-step instructions
-- Screenshots and visual guides
-- Best practices for playing
+1. **Prediction Overview** (`/play/index`) — introduction, rules, fees, contract addresses
+2. **How-to Guide** (`/play/prediction-guide`) — step-by-step instructions with screenshots
+3. **FAQ** (`/play/prediction-faq`) — payout calculations, fees, ties, refunds, common questions
 
-### 3. **FAQ** (`/play/prediction-faq`)
-- Common questions and answers
-- Payout calculations
-- Fee structure explanation
+### Technical Reference
+
+4. **How It Works Under the Hood** (`/play/technical-overview`) — architecture, Chainlink Data Streams price verification, round lifecycle, reward rules
+5. **Contract Reference** (`/play/contract-reference`) — addresses, parameters, roles, player-callable functions, events
 
 ## 🔧 Configuration
 

@@ -1,0 +1,77 @@
+---
+title: Contract Reference
+description: Addresses, parameters, roles, and user-callable functions of the PlayShib.fun Prediction contracts
+---
+
+Reference for interacting with the Prediction contracts directly — for example from a block explorer. For how the system fits together, see [How It Works Under the Hood](technical-overview).
+
+## Addresses
+
+<Note>
+The new contracts are being deployed. Addresses will be published here at launch.
+</Note>
+
+| Contract | Network | Address |
+|---|---|---|
+| Prediction | Shibarium | _To be announced_ |
+| Price Oracle (Chainlink Data Streams) | Shibarium | _To be announced_ |
+
+## Key parameters
+
+| Parameter | Value | Meaning |
+|---|---|---|
+| Round interval | 300 seconds (5 minutes) | Time from a round's start to its lock, and from its lock to its close |
+| Buffer window | 60 seconds | How long after the scheduled lock/close time the round can still be executed; missing it voids the round (refunds) |
+| Treasury fee | 5% | Taken from the total pot of every two-sided round; hard-capped at 10% in the contract |
+| Minimum bet | _To be announced_ | Smallest stake accepted per prediction |
+| Price decimals | 18 | All SHIB/USD prices are 18-decimal fixed-point values |
+
+## Roles
+
+| Role | Contract | Can |
+|---|---|---|
+| Owner | both | Recover stray tokens and appoint the admin (Prediction); set report-age limit and authorised caller (Oracle). Ownership transfers are two-step — the new owner must explicitly accept |
+| Admin | Prediction | Pause/unpause, set fee and round parameters (only while paused), swap the oracle, claim treasury |
+| Operator (keeper) | Prediction | Drive the round clock: `genesisStartRound`, `genesisLockRound(report)`, `executeRound(report)` |
+| Authorised caller | Oracle | The only address (besides the owner) allowed to submit price reports — set to the Prediction contract |
+
+Parameter changes (fee, interval, minimum bet, oracle address) are only possible **while the game is paused**, so they can never alter a round in progress.
+
+## Functions for players
+
+Read functions (free, no transaction needed):
+
+| Function | Returns |
+|---|---|
+| `claimable(epoch, user)` | Whether the user won that round and hasn't collected yet |
+| `refundable(epoch, user)` | Whether the user's bet in that round is reclaimable (round failed to settle) |
+| `getUserWinningAmount(epoch, user)` | The user's pure profit for a round, excluding their returned stake (0 if lost/refund/unsettled) |
+| `getUserRounds(user, cursor, size)` | Paginated list of rounds the user entered, with their bet info |
+| `getUserRoundsLength(user)` | Total number of rounds the user has entered |
+| `rounds(epoch)` | Full round data: timestamps, lock/close price, pool sizes, reward amounts |
+| `currentEpoch()` | The round currently accepting bets |
+
+Write functions (require a transaction from your wallet):
+
+| Function | What it does |
+|---|---|
+| `betBull(epoch)` | Enter HIGHER for the current round, staking the BONE sent with the transaction |
+| `betBear(epoch)` | Enter LOWER for the current round, staking the BONE sent with the transaction |
+| `claim(epochs[])` | Collect winnings and/or refunds for one or many rounds in a single transaction |
+
+<Tip>
+`claim` accepts an array, so you can collect several rounds' winnings at once and pay gas only once.
+</Tip>
+
+## Key events
+
+Useful for tracking activity on a block explorer or indexer:
+
+| Event | Emitted when |
+|---|---|
+| `BetBull(sender, epoch, amount)` / `BetBear(sender, epoch, amount)` | A prediction is placed |
+| `LockRound(epoch, roundId, price)` | A round locks with the verified lock price |
+| `EndRound(epoch, roundId, price)` | A round closes with the verified close price |
+| `RewardsCalculated(epoch, rewardBaseCalAmount, rewardAmount, treasuryAmount)` | A round's pot is distributed |
+| `Claim(sender, epoch, amount)` | A user collects winnings or a refund |
+| `PriceUpdated(roundId, price, timestamp)` (Oracle) | A verified price report is accepted and stored |

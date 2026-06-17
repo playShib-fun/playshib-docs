@@ -2,52 +2,59 @@
 title: Prediction
 ---
 
-Welcome to PlayShib.fun Prediction, a simple and decentralized way to predict the price movement of BONE and win rewards!
+Welcome to PlayShib.fun Prediction, a simple and decentralized way to predict the price movement of SHIB and win rewards!
 
 <img
   className="shib_header_img"
-  src="https://d2kcuz85m99k18.cloudfront.net/playShib.png"
-  alt="Shibarium DAO Hero"
+  src="/screens/prediction-overview.png"
+  alt="PlayShib Prediction page overview"
 />
 
 
 <Tip>
 **Let's Play 🚀**
 
-Predict whether the price of BONE will go HIGHER or LOWER in a 5-minute round
+Predict whether the price of SHIB/USD will go HIGHER or LOWER in a 5-minute round
 </Tip>
 
 ## How It Works:
 
-- Predict whether the price of BONE will go HIGHER or LOWER in a 5-minute round.
-- Stake your BONE tokens on your prediction.
+- Predict whether the price of SHIB/USD will go HIGHER or LOWER in a 5-minute round.
+- Stake your BONE tokens on your prediction.
 - If your prediction is correct when the round ends, you win a share of the prize pool!
 - Collect your winnings 💰 at any time—you are never rushed.
 
 ## Ready to Start :
 
-- Connect your wallet that holds BONE tokens.
+- Connect your wallet that holds BONE tokens.
 - Check the countdown timer ⏱️ for the current round — make sure there's at least 30 seconds left before making your prediction.
-- Choose Enter HIGHER to predict the price will rise, or Enter LOWER to predict it will fall.
-- Enter the amount of BONE you want to commit and confirm the transaction.
+- Choose Enter HIGHER to predict the price will rise, or Enter LOWER to predict it will fall.
+- Enter the amount of BONE you want to commit and confirm the transaction.
 - Wait for the round to complete automatically.
-- If you win, claim your winnings easily with the Collect Winnings button 🏆.
+- If you win, claim your winnings easily with the Collect Winnings button 🏆.
 
 ## Important Notes :
 
-- Once you enter a prediction, it is locked in and cannot be changed or removed.
-- A 5% treasury fee is applied to each round’s total pot to support the platform 🛠️.
-- Out of this fee, 2% of all BONE staked is permanently burned 🔥, reducing the total supply and creating deflationary pressure.
-- The remaining 3% funds development, resources, and upkeep 💼 to ensure continued growth and reliability.
+- Once you enter a prediction, it is locked in and cannot be changed or removed. You can enter only one prediction per round, and a small minimum bet applies.
+- The SHIB/USD price is sourced from **Chainlink Data Streams** and cryptographically verified on-chain before any round is locked or settled — nobody can manually set or override the price. Learn more in [How It Works Under the Hood](technical-overview).
+- A 5% treasury fee is applied to each round's total pot 🛠️. The fee supports platform development and upkeep, and a portion is contributed to S.O.U. to support victims of the bridge hack 🤝.
+- If the price at the end of a round is exactly the same as the locked price (a tie), the round goes to the house.
 - Prize pools and multipliers dynamically adjust based on all users' predictions.
+- If a round ever can't be settled in time (for example, the price feed is interrupted), your staked BONE becomes refundable in full — collect it with the same Collect Winnings flow.
 - Due to blockchain finalization, results may sometimes update a few seconds after the round ends.
 
-## Contract Address
+## Contract Addresses
+
+<Note>
+The new Prediction and Price Oracle contracts are being deployed. The addresses below will be published here at launch.
+</Note>
 
 <CardGroup cols={1}>
 **Network name:** Shibarium
 
-**Address :** 0xEfC9743D7e1b84D413647385EC9Ff42Cd9b10119
+**Prediction contract:** _To be announced_
+
+**Price Oracle contract:** _To be announced_
 </CardGroup>
 
 
@@ -60,7 +67,10 @@ Predict whether the price of BONE will go HIGHER or LOWER in a 5-minute ro
   <Card title="FAQ" icon="coins" href="prediction-faq">
     Prediction FAQ's
   </Card>
+  <Card title="Under the Hood" icon="gears" href="technical-overview">
+    How It Works Under the Hood
+  </Card>
+  <Card title="Contract Reference" icon="file-contract" href="contract-reference">
+    Contracts, roles & parameters
+  </Card>
 </CardGroup>
-
-
-

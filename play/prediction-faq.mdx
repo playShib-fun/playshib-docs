@@ -2,45 +2,65 @@
 title: Prediction FAQ
 ---
 
-## General Questions - FQA
+## General Questions - FAQ
 
 
 #### How is the payout calculated?
-- Payout Ratio for HIGHER: Total Pool ÷ Amount Bet on HIGHER
-- Payout Ratio for LOWER:** Total Pool ÷ Amount Bet on LOWER
-- Payout Amount: Payout Ratio × Your Bet × (1 - Treasury Fee)
 
-##### Suppose you bet 8 BONE on the LOWER position.
-- Total LOWER pool: 60 BONE
-- Total HIGHER pool: 90 BONE
-- Total pool: 150 BONE
-- Treasury fee: 5% (includes 2% burn and 3% platform fee)
+The 5% treasury fee is taken from the total pool first, and the remaining reward pool is shared among everyone on the winning side, in proportion to their bet:
 
-##### Step 1: Calculate Payout Ratio
-Payout Ratio = Total Pool ÷ LOWER Pool = 150 ÷ 60 = 2.5x
+- Reward Pool: Total Pool × (1 − Treasury Fee)
+- Payout Ratio for HIGHER: Reward Pool ÷ Amount Bet on HIGHER
+- Payout Ratio for LOWER: Reward Pool ÷ Amount Bet on LOWER
+- Your Payout: Your Bet × Payout Ratio (this includes your original stake back)
 
-##### Step 2: Calculate Gross Payout
-Gross Payout = Your Bet × Payout Ratio = 8 × 2.5 = 20 BONE
+##### Suppose you bet 8 BONE on the LOWER position.
+- Total LOWER pool: 60 BONE
+- Total HIGHER pool: 90 BONE
+- Total pool: 150 BONE
+- Treasury fee: 5%
 
-##### Step 3: Apply Treasury Fee (5%)
-Net Payout = Gross Payout × (1 – 0.05) = 20 × 0.95 = 19 BONE
+##### Step 1: Apply the Treasury Fee (5%)
+Reward Pool = Total Pool × (1 – 0.05) = 150 × 0.95 = 142.5 BONE
 
-##### Step 4: Calculate Profit
-Profit = Net Payout – Your Bet = 19 – 8 = 11 BONE
+##### Step 2: Calculate the Payout Ratio
+Payout Ratio = Reward Pool ÷ LOWER Pool = 142.5 ÷ 60 = 2.375x
 
-<Note>
-Out of the 5% treasury fee, 2% of BONE is burned 🔥 each round, reducing overall supply, while the remaining 3% supports platform development and resources.
-</Note>
+##### Step 3: Calculate Your Payout
+Payout = Your Bet × Payout Ratio = 8 × 2.375 = 19 BONE
+
+##### Step 4: Calculate Profit
+Profit = Payout – Your Bet = 19 – 8 = 11 BONE
+
+#### What are the fees?
+5% of each round's total pot goes to the treasury 🛠️. The fee supports platform development, resources, and upkeep, and a portion is contributed to S.O.U. to support victims of the bridge hack 🤝. No fee is taken on refunded rounds.
+
+#### Where does the price come from?
+The SHIB/USD price is delivered by **Chainlink Data Streams**, a decentralized oracle network. Every price used to lock or end a round arrives as a cryptographically signed report that is verified on-chain before it can be used. There is no manual price entry or override — if a valid signed report isn't available, the round simply cannot be settled and bets become refundable. See [How It Works Under the Hood](technical-overview) for details.
 
 #### Is there a time limit before I can collect my winnings?
 No, collect your winnings 💰 at any time.
 
-#### What are the fees?
-5% of each round's total pot will go to the treasury 🛠️. Out of this fee, 2% of all BONE staked is permanently burned 🔥, reducing the total supply and creating deflationary pressure.
+#### What happens if the round ends in a tie?
+If the close price is exactly equal to the locked price, neither side wins — the round goes to the house and the full pot is sent to the treasury. Ties are rare, but they are a defined outcome of the game.
+
+#### What if everyone bets on the same side?
+If a round only has predictions on one side:
+
+- If that side turns out to be **correct**, everyone gets their full stake back — no fee is taken, because there is no opposing pool to win from.
+- If that side is **wrong** (or the round ties), the pot goes to the treasury.
+
+#### What happens if a round fails to settle?
+Each round must be settled within a short buffer window after it ends. If that doesn't happen — for example, because the price feed was interrupted or the game was paused — the round is voided and every participant can reclaim their full staked amount through the normal Collect flow. Refunds are always for 100% of your bet.
+
+#### Can I change or remove my position?
+No. Once you confirm a prediction, it is locked in for that round. You can also only enter once per round per wallet.
+
+#### Is there a minimum bet?
+Yes, a small minimum bet amount applies to every prediction. The exact amount is shown in the app when you enter a round.
+
+#### Why can't I play from my multisig or smart wallet?
+For safety, the Prediction contract only accepts bets from regular wallet addresses (EOAs). Smart-contract wallets — including multisigs and some account-abstraction wallets — cannot enter rounds.
 
 #### The round's result changed after the round ended! Why?
 Due to blockchain confirmation and data processing, final results may briefly update after the “live” round finishes.
-
-#### Can I change or remove my position?
-No. Once you confirm a prediction, it is locked in for that round.
-

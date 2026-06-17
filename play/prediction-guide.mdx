@@ -5,19 +5,17 @@ description: Step-by-step guide to use, play, on the PlayShib.fun
 
 <img
   className="shib_header_img"
-  src="https://d2kcuz85m99k18.cloudfront.net/playShib.png"
-  alt="Shibarium DAO Hero"
+  src="/screens/prediction-overview.png"
+  alt="PlayShib Prediction page showing round cards, SHIB/USD price, and timer"
 />
 
-Playing PlayShib.fun Prediction lets you test your foresight to earn rewards. Use your market knowledge or gut feeling to predict if the BONE,  price will go higher or lower in the near future. Get it right and you’ll collect a share of the round’s prize pool!
+Playing PlayShib.fun Prediction lets you test your foresight to earn rewards. Use your market knowledge or gut feeling to predict if the SHIB/USD price will go higher or lower in the near future. Stake BONE on your prediction — get it right and you'll collect a share of the round's prize pool!
 
-To enter a round of Prediction, you'll want to check how long is left in the current round. You'll find the timer in the top-right area.
+<Note>
+Predictions must be placed from a regular wallet address. Smart-contract wallets (such as multisigs or some account-abstraction wallets) cannot enter rounds — this is a safety restriction enforced by the contract.
+</Note>
 
-<img
-  className="shib_header_img"
-  src="https://d2kcuz85m99k18.cloudfront.net/playShib_1.png"
-  alt="Shibarium DAO Hero"
-/>
+To enter a round of Prediction, you'll want to check how long is left in the current round. You'll find the timer at the top center of the page.
 
 If the timer is too low your prediction may not confirm in time, so check there's still plenty of time left before you make a prediction (30 seconds should be plenty, but give yourself more time if you're following along with this guide).
 
@@ -25,114 +23,111 @@ If the timer is too low your prediction may not confirm in time, so check there'
 
 When you're sure you have enough time, you can place your prediction for the next round:
 
-1. In the "Next" section you'll see a green Enter HIGHER button and a red Enter LOWER button. Click Enter LOWER if you want to predict a rise in price, and click Enter LOWER if you want to predict a drop in price.
-
-<img
-  className="shib_header_img"
-  src="https://d2kcuz85m99k18.cloudfront.net/next_round.png"
-  alt="Shibarium DAO Hero"
-/>
+1. In the "Next" section you'll see a green **Enter UP** button and a red **Enter DOWN** button. Click **Enter UP** if you want to predict a rise in price, and click **Enter DOWN** if you want to predict a drop in price.
 
 2. Each will have a different reward multiplier. The multiplier will change over time as the "Prize Pool" increases depending on people's predictions. The Prize Pool is shown just above the buttons.
 
-<img
-  className="shib_header_img"
-  src="https://d2kcuz85m99k18.cloudfront.net/round_prize_pool.png"
-  alt="Shibarium DAO Hero"
-/>
-
-
-3. A new window will open. In the window, you'll see "Commit" to commit BNB, ETH or CAKE for your prediction. Type the number of tokens you would like to commit to your prediction for this round in the field. You can also use the bunny slider or click the percent buttons if you prefer.
+3. A "Set Position" panel will open. Enter the amount of BONE you would like to commit to your prediction for this round. You can also use the slider or click the percent buttons (10%, 25%, 50%, Max) if you prefer. Keep in mind there is a small minimum bet amount per round.
 
 <img
   className="shib_header_img"
-  src="https://d2kcuz85m99k18.cloudfront.net/bet_amount.png"
-  alt="Shibarium DAO Hero"
+  src="/screens/set-position.png"
+  alt="Set Position panel with BONE amount input, slider, and Confirm button"
 />
 
-4. Once you've decided the amount to commit, click Confirm and confirm your action in your wallet.
+4. Once you've decided the amount to commit, click **Confirm**. A confirmation modal will appear showing your bet amount, the treasury fee, and your position. Review the details and click **Confirm UP** (or **Confirm DOWN**) to sign the transaction in your wallet.
 
 <img
   className="shib_header_img"
-  src="https://d2kcuz85m99k18.cloudfront.net/processing.png"
-  alt="Shibarium DAO Hero"
+  src="/screens/confirm-transaction.png"
+  alt="Confirm Transaction modal showing bet amount, treasury fee, and position"
 />
 
-5. After your transaction confirms, an "ENTERED" message will appear.
+5. After your transaction confirms, your entry will appear on the Next round card showing your position and staked amount.
 
 <img
   className="shib_header_img"
-  src="https://d2kcuz85m99k18.cloudfront.net/bet_success.png"
-  alt="Shibarium DAO Hero"
+  src="/screens/bet-entered.png"
+  alt="Next round card showing YOU ENTERED UP with staked BONE amount"
 />
 
-## Predicting the next round
+## Watching the live round
 
-A live round will last for 5 minutes. You can watch the price update during the 5 minutes if you'd like.
+A live round will last for 5 minutes. You can watch the SHIB/USD price update during the 5 minutes if you'd like.
 
-<img
-  className="shib_header_img"
-  src="https://d2kcuz85m99k18.cloudfront.net/live_card.png"
-  alt="Shibarium DAO Hero"
-  style={{ width: '50%', maxWidth: '900px', display: 'block', margin: '40px auto 32px auto', borderRadius: '16px' }}
-/>
+The Prediction page includes two price chart views — a **Chainlink Chart** showing the on-chain oracle price, and a **TradingView Chart** showing the broader market view. Switch between them using the tabs below the round cards.
 
-Your prediction is locked in as soon as you confirm—no changes are allowed during or after the live round..
-
-## Once your entered round finishes
-
-After 5/10 minutes as the live round, your entered round will finish. Everything is automatic, so there's nothing you need to do to end the round.
-
-### Seeing the results
-
-- As the 5/10 minutes finish, the "LIVE" section will change to "Calculating". Calculating the results only takes a moment.
-
-<img
-  className="shib_header_img"
-  src="https://d2kcuz85m99k18.cloudfront.net/calculating.png"
-  alt="Shibarium DAO Hero"
-  style={{ width: '50%', maxWidth: '900px', display: 'block', margin: '40px auto 32px auto', borderRadius: '16px' }}
-/>
-
-- After a short wait, the finished round will move left and say "Ended". The result of the round will display with either HIGHER colored in green, or LOWER colored in red.
-
-<div style={{ display: 'flex', justifyContent: 'center', gap: '20px', margin: '40px auto 32px auto'}}>
+<div style={{ display: 'flex', flexDirection: 'column', gap: '16px', margin: '40px auto 32px auto'}}>
   <img
     className="shib_header_img"
-    src="https://d2kcuz85m99k18.cloudfront.net/round_won.png"
-    alt="Round Won - HIGHER result in green"
+    src="/screens/chainlink-chart.png"
+    alt="Chainlink Chart showing SHIB/USD on-chain price data"
     style={{ width: '100%', borderRadius: '16px' }}
   />
   <img
     className="shib_header_img"
-    src="https://d2kcuz85m99k18.cloudfront.net/round_loss.png"
-    alt="Round Loss - LOWER result in red"
-    style={{ width: '100%%', borderRadius: '16px' }}
+    src="/screens/tradingview-chart.png"
+    alt="TradingView Chart showing SHIB/USD market price"
+    style={{ width: '100%', borderRadius: '16px' }}
   />
 </div>
 
-### Seeing results for older rounds
+Your prediction is locked in as soon as you confirm—no changes are allowed during or after the live round.
 
-If you want to see the results for rounds you've entered that are older than a few rounds, you'll need to follow the steps below to find the results.
+## Once your entered round finishes
 
-- History page will open
+After 5 minutes as the live round, your entered round will finish. Everything is automatic, so there's nothing you need to do to end the round.
+
+### Seeing the results
+
+After a short wait, the finished round will move left and show the result — either UP or DOWN — along with the price change. If your prediction was correct, it will show as **Won**; otherwise it shows as **Lost**.
+
+### History
+
+To see the results of all rounds you've participated in, open the **History** page. You'll find your past rounds listed with the bet amount, position, result, and claim status.
 
 <img
   className="shib_header_img"
-  src="https://d2kcuz85m99k18.cloudfront.net/history.png"
-  alt="Shibarium DAO Hero"
+  src="/screens/history-rounds.png"
+  alt="History page showing past prediction rounds with results and claim status"
+/>
+
+Click on any round to expand it and see the full details — locked price, closed price, prize pool, your winnings, and payout multipliers.
+
+<img
+  className="shib_header_img"
+  src="/screens/history-details.png"
+  alt="Expanded round details showing locked price, closed price, winnings, and payout info"
+/>
+
+Switch to the **PNL** tab to see your overall performance — win rate, net results, average return per round, and a breakdown of won vs. lost rounds.
+
+<img
+  className="shib_header_img"
+  src="/screens/history-pnl.png"
+  alt="PNL tab showing win/loss summary, net results, and average return per round"
 />
 
 ## Collecting any winnings
 
-If you won your entered round, a Collect Winnings button will appear next to a gold trophy. Click the button.
+If you won your entered round, a **Claimed** badge will appear in the History page once you've collected, or you can claim directly from the round card. Click the Collect button, confirm the action in your wallet, and your BONE winnings will be transferred.
 
-A new window will appear showing the amount of winnings you can collect with a Confirm button. Click the button and confirm the action in your wallet.
+**Your BONE winnings will now be in your wallet.**
+
+## Leaderboard
+
+Check the **Leaderboard** to see how you stack up against other players. It shows the top players ranked by net winnings, along with their win rate and rounds played.
 
 <img
   className="shib_header_img"
-  src="https://d2kcuz85m99k18.cloudfront.net/collect_winning.png"
-  alt="Shibarium DAO Hero"
+  src="/screens/leaderboard.png"
+  alt="Leaderboard showing top players by net winnings, win rate, and rounds played"
 />
 
-**Your token winnings will now be in your wallet.**
+## What if the round ends in a tie?
+
+If the price at the end of the round is exactly the same as the locked price, neither UP nor DOWN wins — the round goes to the house and the pot is sent to the treasury. Ties are rare, but they can happen.
+
+## Refunds
+
+If a round ever fails to settle in time — for example, if the price feed is temporarily interrupted or the game is paused — the round is voided and every participant can reclaim their full staked amount. Refunds are collected exactly like winnings: a Collect button will appear for the affected round, and clicking it returns your BONE in full (no fee is taken on refunds).
